@@ -1,0 +1,21 @@
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+//DEFINICION DE LAS VARIABLES
+$masterdark: #103f57; 
+$masterlight: #1d8ecf;
+
+// CAMBIAR COLOR DE BOTONES
+$
+
+//CUSTOM MASTERMIND THEME
+
+$master-colors : (
+  "masterdark":   $masterdark,
+  "masterlight": $masterlight
+);
+
+$theme-colors:map-merge($master-colors, $theme-colors);
+
+//importar las librerias fuente de bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

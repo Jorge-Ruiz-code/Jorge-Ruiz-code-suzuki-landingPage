@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki Landing Page</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="container-fluid p-3 bg-masterdark text-white sticky-top">
+      <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between">
+        <a class="shadow-lg navbar-brand p-1 bg-white" href="index.html">
+          <img src="./img/Suzuki_logo.png" alt="Logo de suzuki">
+        </a>
+      </div>
+    </header>
+    <!-- CAROUSEL -->
+    <div id="carouselWelcome" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselWelcome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselWelcome" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/FRONX-ACCION-20092024.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/0-13.webp" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselWelcome" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselWelcome" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- FIN CAROUSEL -->
+    <main class="container my-5">
+      <h2>Para Contactarnos</h2>
+      <form class="needs-validation" novalidate=""> 
+        <div class="row g-3"> 
+          <!-- NOMBRE -->
+          <div class="col-sm-6"> 
+            <label for="firstName" class="form-label">Nombres</label> 
+            <input type="text" class="form-control" id="firstName" placeholder="Escribe tu nombre" value="" required> 
+            <div class="invalid-feedback">
+              Por favor ingresa Nombres validos.
+            </div> 
+          </div> 
+          <!-- APELLIDOS -->
+          <div class="col-sm-6"> 
+            <label for="lastName" class="form-label">Apellidos</label> 
+            <input type="text" class="form-control" id="lastName" placeholder="Escribe tus apellidos" value="" required> 
+            <div class="invalid-feedback">
+              Por favor ingresa Apellidos validos.
+            </div> 
+          </div> 
+          <!-- PAíS -->
+          <div class="col-md-5"> 
+            <label for="country" class="form-label">País</label> 
+            <select class="form-select" id="country" required> 
+              <option value="">Elije...</option> 
+              <option>Guatemala</option>
+              <option>Mexico</option> 
+            </select> 
+            <div class="invalid-feedback">
+              Por favor ingresa un País valida.
+            </div> 
+          </div> 
+          <!-- CIUDAD -->
+          <div class="col-md-4"> 
+            <label for="state" class="form-label">Ciudad</label> 
+            <select class="form-select" id="state" required> 
+              <option value="">Elije...</option> 
+              <option>CDMX</option> 
+              <option>Guatemala</option> 
+              <option>Quetzaltenango</option> 
+              <option>Chiapas</option> 
+            </select> 
+            <div class="invalid-feedback">
+              Por favor ingresa una Ciudad valida.
+            </div> 
+          </div>  
+          <!-- CORREO ELECTRONICO -->
+          <div class="col-12"> 
+            <label for="email" class="form-label">Email</label> 
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required> 
+            <div class="invalid-feedback">
+              Por favor ingresa un Email valido.
+            </div> 
+          </div> 
+          <!-- MODELO DE PRODUCTO -->
+          <div class="col-md-12"> 
+            <label for="product" class="form-label">Selecciona el modelo de producto sobre el que se preguntas</label> 
+            <select class="form-select" id="product" required> 
+              <option value="">Elije...</option> 
+              <option>Fronx</option> 
+              <option>Celerio</option> 
+              <option>Grand vitara</option> 
+              <option>Jimny</option> 
+            </select> 
+            <div class="invalid-feedback">
+              Por favor seleccione un producto valido.
+            </div> 
+          </div> 
+        </div> 
+
+        <hr class="my-4"> 
+          <h4 class="mb-3">Requiere atención para:</h4> 
+          <div class="my-3"> 
+            <div class="form-check"> 
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required> 
+              <label class="form-check-label" for="credit">Persona particular</label> 
+            </div> 
+            <div class="form-check"> 
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required> 
+              <label class="form-check-label" for="debit">Representante de empresa</label> 
+            </div>  
+          </div>
+        <hr class="my-4"> 
+          <div class="row">
+            <div class="col-md-12"> 
+              <label for="comentario" class="form-label">Coméntanos tus dudas, comentarios o inquietudes.<span class="text-body-secondary"> (Opcional)</span></label> 
+              <textarea class="form-control" id="comentario" rows="4"  placeholder="Mi comentario es..."> </textarea>
+            </div> 
+          </div>
+
+        <hr class="my-4"> 
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar Solicitud</button> 
+      </form>
+    </main>
+    <footer class="mt-5 pt-5 bg-masterdark text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-3 mb-3 d-flex justify-content-center justify-content-md-start">
+            <a href="./index.html"><img class="img-fluid" src="./img/Suzuki_logo.png" alt="Logo de Suzuki"></a>
+          </div>
+          <div class="col-md-6 mb-3">
+            <p>Esta es una página que fue hecha como práctica de aprendizaje y no con fines de lucro. Para mayor información acerca de la página oficial que sirvió como base para este proyecto, por favor visite el siguiente enlace: <a href="https://autossuzuki.com.gt/">https://autossuzuki.com.gt/</a></p>
+          </div>
+          <div class="col-md-3 mb-3 text-end">
+            <p>By &copy;Jorge Ruiz :V</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/form.js"></script>
+</body>
+</html>
